@@ -1,6 +1,7 @@
 package tfar.classicbar.impl.overlays.vanilla;
 
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.client.gui.overlay.ForgeGui;
 import tfar.classicbar.config.ConfigCache;
@@ -50,7 +51,7 @@ public class Air extends BarOverlayImpl {
     int xStart = width / 2 + getIconOffset();
     int yStart = height - vOffset;
     Color color = getPrimaryBarColor(0,player);
-    textHelper(graphics,xStart,yStart,air/20,color.colorToText());
+    textHelper(graphics,xStart,yStart, Math.max(air/20f, 0),color.colorToText());
   }
   @Override
   public void renderIcon(GuiGraphics graphics, Player player, int width, int height, int vOffset) {

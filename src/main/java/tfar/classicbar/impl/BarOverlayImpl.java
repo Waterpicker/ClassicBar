@@ -76,7 +76,7 @@ public abstract class BarOverlayImpl implements BarOverlay {
     }
 
     public final boolean shouldRenderText() {
-        return barSettings.show_text;
+        return true; //barSettings.show_text;
     }
 
     public abstract void renderText(GuiGraphics graphics, Player player, int width, int height, int vOffset);
@@ -149,7 +149,7 @@ public abstract class BarOverlayImpl implements BarOverlay {
     }
     @Override
     public final ResourceLocation getIconRL() {
-        return barSettings.icon;
+        return BarOverlayImpl.GUI_ICONS_LOCATION;
     }
     @Override
     public boolean isFitted() {

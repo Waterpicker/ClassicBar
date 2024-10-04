@@ -17,7 +17,7 @@ import tfar.classicbar.api.BarOverlay;
 import tfar.classicbar.compat.ModCompat;
 import tfar.classicbar.config.ClassicBarsConfig;
 import tfar.classicbar.config.ConfigCache;
-import tfar.classicbar.impl.overlays.mod.Blood;
+//import tfar.classicbar.impl.overlays.mod.Blood;
 import tfar.classicbar.impl.overlays.mod.StaminaB;
 import tfar.classicbar.impl.overlays.mod.Thirst;
 import tfar.classicbar.impl.overlays.vanilla.*;
@@ -100,7 +100,7 @@ public class EventHandler implements IGuiOverlay {
 
     //mod renderers
     ClassicBar.logger.info("Registering Mod Overlays");
-    if (ModCompat.vampirism.loaded)EventHandler.register(new Blood());
+//    if (ModCompat.vampirism.loaded)EventHandler.register(new Blood());
   //  if (ModCompat.feathers.loaded)EventHandler.register(new Feathers());
     if (ModCompat.parcool.loaded)EventHandler.register(new StaminaB());
     if (ModCompat.toughasnails.loaded)EventHandler.register(new Thirst());
